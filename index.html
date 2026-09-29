@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex">
+<title>설비구매 실적 검증 웹앱</title>
+<noscript><meta http-equiv="refresh" content="0; url=https://crown-tulsa-hidden-tcp.trycloudflare.com"></noscript>
+<style>
+  body{margin:0;min-height:100vh;display:grid;place-items:center;background:#0A1B3A;color:#EEF2F8;font-family:"SEBANG Gothic","Malgun Gothic",sans-serif;text-align:center;padding:24px;box-sizing:border-box}
+  h1{font-size:22px;margin:0 0 10px}
+  p{color:#B8C4DC;margin:6px 0}
+  a{color:#FF8A66;font-weight:700;word-break:break-all}
+  .box{background:#12264C;border:1px solid #2A4272;border-radius:14px;padding:28px 32px;max-width:560px}
+  .small{font-size:13px;color:#8A96AD;margin-top:16px}
+</style>
+</head>
+<body>
+<div class="box">
+  <h1>설비구매 실적 집계·검증 웹앱</h1>
+  <p id="msg">실제 동작 화면으로 이동합니다…</p>
+  <p><a id="link" href="https://crown-tulsa-hidden-tcp.trycloudflare.com">https://crown-tulsa-hidden-tcp.trycloudflare.com</a></p>
+  <p class="small">이 안내 주소는 고정이고, 실제 앱 주소는 운영자 PC의 터널이 켜질 때마다 새로 발급됩니다. 이동이 안 되면 운영자에게 알려 주세요. 갱신 2026-09-29 10:09</p>
+</div>
+<script>
+(function () {
+  var fallback = "https://crown-tulsa-hidden-tcp.trycloudflare.com";
+  function go(u) { if (u && /^https:\/\//.test(u)) { document.getElementById("link").href = u; document.getElementById("link").textContent = u; location.replace(u); } }
+  fetch("current.txt?ts=" + Date.now(), { cache: "no-store" })
+    .then(function (r) { return r.ok ? r.text() : ""; })
+    .then(function (t) { var u = (t || "").trim(); go(u || fallback); })
+    .catch(function () { go(fallback); });
+})();
+</script>
+</body>
+</html>
